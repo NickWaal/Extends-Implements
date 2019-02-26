@@ -1,6 +1,5 @@
 package Demo015;
 //1 erfboom van 3 klassen
-
 //1 erfboom van 2 klassen
 //1 interface
 //1 abstracte klasse
@@ -16,12 +15,10 @@ class Demo015 {
 	public static void main(String[] args) {
 
 		Touchscreen b = new Boek();
-		Touchscreen t1 = new Telefoon("Blauw", false, 600);
+		//Touchscreen t1 = new Telefoon("Blauw", false, 600);
 		Samsung s9 = new Samsung("Geel", true, 1100, "Galaxy S10");
 
-
 		Apple x = new Apple("Wit", false, 1500, "X");
-
 
 		s9.model();
 		s9.kleur();
@@ -44,7 +41,7 @@ class Demo015 {
 		s.kleur();
 		System.out.println(s9);
 		System.out.println(x);
-
+		
 	}
 }
 
@@ -75,7 +72,6 @@ class Gebruiker {
 			System.out.println("Ik heb het apparaat touch input gegeven");
 		}
 	}
-
 }
 
 abstract class Apparaat {
@@ -146,7 +142,7 @@ class Apple extends Telefoon implements Touchscreen {
 	void model() {
 		System.out.println("Dit is een Iphone " + model);
 	}
-	
+
 	@Override
 	public String toString() {
 
@@ -158,8 +154,8 @@ class Apple extends Telefoon implements Touchscreen {
 class Stofzuiger extends Apparaat {
 
 	public Stofzuiger(String kleur, boolean kanAan, int prijs) {
-	        super(kleur, kanAan, prijs);
-	    }
+		super(kleur, kanAan, prijs);
+	}
 
 	void aanZetten() {
 		System.out.println("Stofzuiger is aan");
@@ -171,10 +167,11 @@ class Stofzuiger extends Apparaat {
 }
 
 class Laptop extends Apparaat {
-	
+
 	public Laptop(String kleur, boolean kanAan, int prijs) {
-        super(kleur, kanAan, prijs);
-    }
+		super(kleur, kanAan, prijs);
+	}
+
 	void aanZetten() {
 		System.out.println("Laptop is aan");
 	}
