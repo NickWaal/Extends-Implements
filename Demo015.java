@@ -22,6 +22,7 @@ class Demo015 {
 
 		s9.model();
 		s9.kleur();
+		s9.aanraakInput();
 
 		x.model();
 		x.kleur();
@@ -53,7 +54,7 @@ class Reparateur {
 	}
 
 	void repareren(Apparaat apparaat) {
-		System.out.println("Ik ga repareren");
+		System.out.println("Ik ga het apparaat met de kleur " + apparaat.kleur + " repareren");
 	}
 }
 
@@ -102,10 +103,11 @@ class Telefoon extends Apparaat implements Touchscreen {
 	}
 
 	public void aanraakInput() {
+		System.out.println("Je hebt de telefoon met kleur " + this.kleur +  " aanraak input gegeven");
 	}
 }
 
-class Samsung extends Telefoon implements Touchscreen {
+class Samsung extends Telefoon {
 	String model;
 
 	public Samsung(String kleur, boolean kanAan, int prijs, String model) {
@@ -132,7 +134,7 @@ class Apple extends Telefoon implements Touchscreen {
 	}
 
 	void model() {
-		System.out.println("Dit is een Iphone " + model);
+		System.out.println("Dit is een iPhone " + model);
 	}
 
 	@Override
