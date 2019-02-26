@@ -1,5 +1,6 @@
 package Demo015;
 //1 erfboom van 3 klassen
+
 //1 erfboom van 2 klassen
 //1 interface
 //1 abstracte klasse
@@ -15,23 +16,21 @@ class Demo015 {
 	public static void main(String[] args) {
 
 		Touchscreen b = new Boek();
-		//Touchscreen t1 = new Telefoon("Blauw", false, 600);
+		// Touchscreen t1 = new Telefoon("Blauw", false, 600);
 		Samsung s9 = new Samsung("Geel", true, 1100, "Galaxy S10");
-
 		Apple x = new Apple("Wit", false, 1500, "X");
 
 		s9.model();
 		s9.kleur();
-		s9.toString();
 
 		x.model();
 		x.kleur();
-		s9.toString();
 
 		Reparateur r = new Reparateur();
 		Telefoon t2 = new Telefoon("Rood", true, 500);
 		Stofzuiger s = new Stofzuiger("Grijs", true, 200);
 		Laptop l = new Laptop("Zwart", true, 750);
+
 		r.rol();
 		r.repareren(t2);
 		t2.aanZetten();
@@ -41,7 +40,6 @@ class Demo015 {
 		s.kleur();
 		System.out.println(s9);
 		System.out.println(x);
-		
 	}
 }
 
@@ -50,7 +48,6 @@ abstract class Persoon {
 }
 
 class Reparateur {
-
 	void rol() {
 		System.out.println("Dit is de reparateur");
 	}
@@ -61,7 +58,6 @@ class Reparateur {
 }
 
 class Gebruiker {
-
 	void rol() {
 		System.out.println("Dit is de gebruiker");
 	}
@@ -90,11 +86,9 @@ abstract class Apparaat {
 
 	{
 	}
-
 }
 
 class Telefoon extends Apparaat implements Touchscreen {
-
 	public Telefoon(String kleur, boolean kanAan, int prijs) {
 		super(kleur, kanAan, prijs);
 	}
@@ -125,9 +119,7 @@ class Samsung extends Telefoon implements Touchscreen {
 
 	@Override
 	public String toString() {
-
 		return "Dit is een Samsung " + this.model + " met de kleur " + this.kleur + " en kost €" + this.prijs;
-
 	}
 }
 
@@ -145,14 +137,11 @@ class Apple extends Telefoon implements Touchscreen {
 
 	@Override
 	public String toString() {
-
 		return "Dit is een iPhone " + this.model + " met de kleur " + this.kleur + " en kost €" + this.prijs;
-
 	}
 }
 
 class Stofzuiger extends Apparaat {
-
 	public Stofzuiger(String kleur, boolean kanAan, int prijs) {
 		super(kleur, kanAan, prijs);
 	}
@@ -167,7 +156,6 @@ class Stofzuiger extends Apparaat {
 }
 
 class Laptop extends Apparaat {
-
 	public Laptop(String kleur, boolean kanAan, int prijs) {
 		super(kleur, kanAan, prijs);
 	}
